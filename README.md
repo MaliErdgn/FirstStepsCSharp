@@ -99,4 +99,3 @@ dot&cross product of two vectors (exterior product)
 little man computer simulation
 lisp interpreter
 enigma simulator with a configuration file (+decypt messages without known settings)
-![image](https://user-images.githubusercontent.com/105178494/205469573-9093bc39-2114-4b5c-8cc0-1f6587511832.png)
