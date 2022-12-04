@@ -45,7 +45,7 @@ namespace FirstStepsCSharp
                     higherOrLowerGuessNo += 1;
                 }
                 Console.WriteLine("It took you " + higherOrLowerGuessNo +" amount of guesses");
-            }
+            }//play game where you try to guess the number (between 1-100)
             public static void tempatureConverter() //Done
             {
                 Console.WriteLine("Choose conversion type:\nCelcius to Kelvin (1)\nCelcius to Fahrenheit (2)\nFahrenheit to Kelvin (3)\nFahrenheit to Celcius (4)\nKelvin to Celcius (5)\nKelvin to Fahrenheit (6)");
@@ -94,7 +94,7 @@ namespace FirstStepsCSharp
                         Console.WriteLine("Invalid input");
                         break;
                 }
-            }
+            }//do conversion between tempature types
             public static void rockPaperScissors() //Done
             {
                 int rockPaperScissorsPlayerScore = 0;
@@ -134,7 +134,7 @@ namespace FirstStepsCSharp
                     }
                     Console.WriteLine("Player "+ rockPaperScissorsPlayerScore + "-" + rockPaperScissorsCPUScore + " Computer");
                 }
-            }
+            }//play rock paper scissors with computer
             public static void FourWayCalculator() //Done
             {
                 static int Add(int firstAddition, int secondAddition) // adds the given numbers
@@ -213,7 +213,7 @@ namespace FirstStepsCSharp
                     }
                     }
                 Calculator();
-            }
+            }//a basic 4 operation calculator (+ - * /)
             public static void CalculateAgeInSeconds() //Done
             {
                 DateTime CalculateAgeInSecondsCurrentDate = DateTime.Now;
@@ -226,7 +226,7 @@ namespace FirstStepsCSharp
                 string[] CalculateAgeInSecondsOutput = CalculateAgeInSecondsDiffString.Split(",");
                 Console.WriteLine(CalculateAgeInSecondsOutput[0] + " seconds have passed since you were born!");
 
-            }
+            }//Calculates the total amount of times past your birthdate
             public static void NameGenerator()//Done 
             {
                 static void nameAndSurnameList(int NameGeneratorLoopAmount) //Creates lists of names and surnames
@@ -265,7 +265,7 @@ namespace FirstStepsCSharp
                 Console.WriteLine("How many random names do you want? ");
                 var NameGeneratorAmount = Console.ReadLine(); //The amount of times the names will be generated     
                 nameAndSurnameList(int.Parse(NameGeneratorAmount));         
-            }
+            }// Gives you random names
         }
     }
 }
