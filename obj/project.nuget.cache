@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Rx28KRBbO6veU8TvrM4LoSSF/rn5GbidzbskP16teV53IO825LH8K6+bo1/6ubBVL/VMvHiBeXKmZOpbzbzlNw==",
+  "dgSpecHash": "Evlirxcgj9cBeuzOdk+lWbW5J2iHQsE9YteU2Gdi6XnoN0U0b2VcuyGqO+CWGZJ5+SvTutuGQOFkQ2Rd2R7YXw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mali\\Desktop\\Codes\\C#\\Beginner\\FirstStepsCSharp\\FirstSteps.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Mali\\.nuget\\packages\\htmlagilitypack\\1.11.46\\htmlagilitypack.1.11.46.nupkg.sha512"
+  ],
   "logs": []
 }

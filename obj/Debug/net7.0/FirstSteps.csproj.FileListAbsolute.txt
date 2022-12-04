@@ -28,3 +28,5 @@ C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\obj\Debug\net7.0\refint
 C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\obj\Debug\net7.0\FirstSteps.pdb
 C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\obj\Debug\net7.0\FirstSteps.genruntimeconfig.cache
 C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\obj\Debug\net7.0\ref\FirstSteps.dll
+C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\bin\Debug\net7.0\HtmlAgilityPack.dll
+C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\obj\Debug\net7.0\FirstSteps.csproj.CopyComplete
