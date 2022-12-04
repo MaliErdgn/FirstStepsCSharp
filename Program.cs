@@ -1,29 +1,28 @@
-﻿using System;
-using HtmlAgilityPack;
+﻿using HtmlAgilityPack;
 
 namespace FirstStepsCSharp
 {
     class Program
     {
-        static void Main(string[] args) 
+        static void Main(string[] args)
         {
             ProgrammingChallenges.NameGenerator();
-        }     
+        }
 
-        
+
         class ProgrammingChallenges
         {
             public static void higherOrLower() //Done
             {
                 Random rand = new Random();
-                int higherOrLowerRandom = rand.Next(1,101); // a random number between 1 and 100 
-                
+                int higherOrLowerRandom = rand.Next(1, 101); // a random number between 1 and 100 
+
                 string guess;
                 int higherOrLowerGuessNo = 0;
                 bool higherOrLowerGame = true;
-                
+
                 Console.WriteLine("In this game the user is going to try to guess the random number between 1 and 100");
-                
+
                 while (higherOrLowerGame == true)
                 {
                     Console.WriteLine("Enter a number: ");
@@ -32,7 +31,7 @@ namespace FirstStepsCSharp
                     {
                         Console.WriteLine("You win!");
                         higherOrLowerGame = false;
-                        
+
                     }
                     else if (higherOrLowerRandom > int.Parse(guess))
                     {
@@ -44,7 +43,7 @@ namespace FirstStepsCSharp
                     }
                     higherOrLowerGuessNo += 1;
                 }
-                Console.WriteLine("It took you " + higherOrLowerGuessNo +" amount of guesses");
+                Console.WriteLine("It took you " + higherOrLowerGuessNo + " amount of guesses");
             }//play game where you try to guess the number (between 1-100)
             public static void tempatureConverter() //Done
             {
@@ -59,35 +58,35 @@ namespace FirstStepsCSharp
                         tempatureConverterInputValue = float.Parse(Console.ReadLine());
                         tempatureConverterReturnedValue = (float)(tempatureConverterInputValue + 273.15);
                         Console.WriteLine(tempatureConverterInputValue + " celcius = " + tempatureConverterReturnedValue + " Kelvin");
-                     break;
+                        break;
                     case "2":
                         Console.WriteLine("Enter the Celcius value: ");
                         tempatureConverterInputValue = float.Parse(Console.ReadLine());
-                        tempatureConverterReturnedValue = (float)((tempatureConverterInputValue*1.8)+32);
+                        tempatureConverterReturnedValue = (float)((tempatureConverterInputValue * 1.8) + 32);
                         Console.WriteLine(tempatureConverterInputValue + " celcius = " + tempatureConverterReturnedValue + " Fahrenheit");
                         break;
                     case "3":
                         Console.WriteLine("Enter the Fahrenheit value: ");
                         tempatureConverterInputValue = float.Parse(Console.ReadLine());
-                        tempatureConverterReturnedValue = (float)((tempatureConverterInputValue-32)*5/9+273.15);
+                        tempatureConverterReturnedValue = (float)((tempatureConverterInputValue - 32) * 5 / 9 + 273.15);
                         Console.WriteLine(tempatureConverterInputValue + " fahrenheit = " + tempatureConverterReturnedValue + " Kelvin");
                         break;
                     case "4":
                         Console.WriteLine("Enter the Fahrenheit value: ");
                         tempatureConverterInputValue = float.Parse(Console.ReadLine());
-                        tempatureConverterReturnedValue = (float)((tempatureConverterInputValue-32)*5/9);
+                        tempatureConverterReturnedValue = (float)((tempatureConverterInputValue - 32) * 5 / 9);
                         Console.WriteLine(tempatureConverterInputValue + " fahrenheit = " + tempatureConverterReturnedValue + " celcius");
                         break;
                     case "5":
                         Console.WriteLine("Enter the Kelvin value: ");
                         tempatureConverterInputValue = float.Parse(Console.ReadLine());
-                        tempatureConverterReturnedValue = (float)(tempatureConverterInputValue-273.15);
+                        tempatureConverterReturnedValue = (float)(tempatureConverterInputValue - 273.15);
                         Console.WriteLine(tempatureConverterInputValue + " Kelvin = " + tempatureConverterReturnedValue + " celcius");
                         break;
                     case "6":
                         Console.WriteLine("Enter the Kelvin value: ");
                         tempatureConverterInputValue = float.Parse(Console.ReadLine());
-                        tempatureConverterReturnedValue = (float)((tempatureConverterInputValue-273.15)*9/5+32);
+                        tempatureConverterReturnedValue = (float)((tempatureConverterInputValue - 273.15) * 9 / 5 + 32);
                         Console.WriteLine(tempatureConverterInputValue + " Kelvin = " + tempatureConverterReturnedValue + " Fahrenheit");
                         break;
                     default:
@@ -102,18 +101,18 @@ namespace FirstStepsCSharp
                 bool rockPaperScissorsGame = true;
                 while (rockPaperScissorsGame == true)
                 {
-                    Console.WriteLine("Choose between rock paper and scissors. If you wanna leave the game write -1: ");            
+                    Console.WriteLine("Choose between rock paper and scissors. If you wanna leave the game write -1: ");
                     string rockPaperScissorsChoice = Console.ReadLine();
                     if (rockPaperScissorsChoice == "-1")
                     {
                         break;
                     }
-                    var rockPaperScissorslist = new List<string>{ "rock","paper","scissors"};
+                    var rockPaperScissorslist = new List<string> { "rock", "paper", "scissors" };
                     var rockPaperScissorsRandom = new Random();
                     int rockPaperScissorsCPUIndex = rockPaperScissorsRandom.Next(rockPaperScissorslist.Count);
                     string rockPaperScissorsCPUChoice = (string)(rockPaperScissorslist[rockPaperScissorsCPUIndex]);
-                    Console.WriteLine("Your Choice: "+rockPaperScissorsChoice);
-                    Console.WriteLine("Computer's Choice: "+rockPaperScissorsCPUChoice);
+                    Console.WriteLine("Your Choice: " + rockPaperScissorsChoice);
+                    Console.WriteLine("Computer's Choice: " + rockPaperScissorsCPUChoice);
                     if (((rockPaperScissorsChoice == "rock") && (rockPaperScissorsCPUChoice == "scissors")) || ((rockPaperScissorsChoice == "paper") && (rockPaperScissorsCPUChoice == "rock")) || ((rockPaperScissorsChoice == "scissors") && (rockPaperScissorsCPUChoice == "paper")))
                     {
                         Console.WriteLine("You Win!");
@@ -123,16 +122,16 @@ namespace FirstStepsCSharp
                     {
                         Console.WriteLine("Draw!");
                     }
-                    else if (((rockPaperScissorsChoice == "rock")&&(rockPaperScissorsCPUChoice == "paper"))||((rockPaperScissorsChoice == "paper")&&(rockPaperScissorsCPUChoice == "scissors"))||((rockPaperScissorsChoice == "scissors")&&(rockPaperScissorsCPUChoice == "rock")))
+                    else if (((rockPaperScissorsChoice == "rock") && (rockPaperScissorsCPUChoice == "paper")) || ((rockPaperScissorsChoice == "paper") && (rockPaperScissorsCPUChoice == "scissors")) || ((rockPaperScissorsChoice == "scissors") && (rockPaperScissorsCPUChoice == "rock")))
                     {
                         Console.WriteLine("You Lose!");
                         rockPaperScissorsCPUScore += 1;
                     }
-                    else 
+                    else
                     {
                         Console.WriteLine("Invalid Input");
                     }
-                    Console.WriteLine("Player "+ rockPaperScissorsPlayerScore + "-" + rockPaperScissorsCPUScore + " Computer");
+                    Console.WriteLine("Player " + rockPaperScissorsPlayerScore + "-" + rockPaperScissorsCPUScore + " Computer");
                 }
             }//play rock paper scissors with computer
             public static void FourWayCalculator() //Done
@@ -164,39 +163,39 @@ namespace FirstStepsCSharp
                     {
                         Console.WriteLine("For addition press 1, for substraction press 2, for multiplication press 3, for division press 4 ");
                         calculatorToDo = Console.ReadLine();
-                        
-                        switch(calculatorToDo)
+
+                        switch (calculatorToDo)
                         {
                             case "1":
                                 Console.WriteLine("Enter first number of addition: ");
-                                firstCalculatorNumber =  int.Parse(Console.ReadLine());
+                                firstCalculatorNumber = int.Parse(Console.ReadLine());
                                 Console.WriteLine("Enter second number of addition: ");
-                                secondCalculatorNumber =  int.Parse(Console.ReadLine());
-                                Console.WriteLine("= " + Add(firstCalculatorNumber,secondCalculatorNumber));
+                                secondCalculatorNumber = int.Parse(Console.ReadLine());
+                                Console.WriteLine("= " + Add(firstCalculatorNumber, secondCalculatorNumber));
                                 calculatorGame = false;
                                 break;
                             case "2":
                                 Console.WriteLine("Enter first number of subtraction: ");
-                                firstCalculatorNumber =  int.Parse(Console.ReadLine());
+                                firstCalculatorNumber = int.Parse(Console.ReadLine());
                                 Console.WriteLine("Enter second number of subtraction: ");
-                                secondCalculatorNumber =  int.Parse(Console.ReadLine());
-                                Console.WriteLine("= " + Subtract(firstCalculatorNumber,secondCalculatorNumber));
+                                secondCalculatorNumber = int.Parse(Console.ReadLine());
+                                Console.WriteLine("= " + Subtract(firstCalculatorNumber, secondCalculatorNumber));
                                 calculatorGame = false;
                                 break;
                             case "3":
                                 Console.WriteLine("Enter first number of multiplication: ");
-                                firstCalculatorNumber =  int.Parse(Console.ReadLine());
+                                firstCalculatorNumber = int.Parse(Console.ReadLine());
                                 Console.WriteLine("Enter second number of multiplication: ");
-                                secondCalculatorNumber =  int.Parse(Console.ReadLine());
-                                Console.WriteLine("= " + Multiply(firstCalculatorNumber,secondCalculatorNumber));
+                                secondCalculatorNumber = int.Parse(Console.ReadLine());
+                                Console.WriteLine("= " + Multiply(firstCalculatorNumber, secondCalculatorNumber));
                                 calculatorGame = false;
                                 break;
                             case "4":
                                 Console.WriteLine("Enter first number of division: ");
-                                firstCalculatorNumber =  int.Parse(Console.ReadLine());
+                                firstCalculatorNumber = int.Parse(Console.ReadLine());
                                 Console.WriteLine("Enter second number of division: ");
-                                secondCalculatorNumber =  int.Parse(Console.ReadLine());
-                                Console.WriteLine("= " + Divide(firstCalculatorNumber,secondCalculatorNumber));
+                                secondCalculatorNumber = int.Parse(Console.ReadLine());
+                                Console.WriteLine("= " + Divide(firstCalculatorNumber, secondCalculatorNumber));
                                 calculatorGame = false;
                                 break;
                             default:
@@ -208,10 +207,10 @@ namespace FirstStepsCSharp
                                     calculatorGame = false;
                                 }
                                 break;
-                        }   
-                                
+                        }
+
                     }
-                    }
+                }
                 Calculator();
             }//a basic 4 operation calculator (+ - * /)
             public static void CalculateAgeInSeconds() //Done
@@ -254,7 +253,7 @@ namespace FirstStepsCSharp
                         var node = htmlSurnameDoc.DocumentNode.SelectSingleNode($"//*[@id=\"mntl-sc-block_1-0-5\"]/div/table/tbody/tr[{i}]/td[2]/p");
                         surnameList.Add(node.InnerText);
                     }
-                    foreach (int j in Enumerable.Range(1, NameGeneratorLoopAmount)) 
+                    foreach (int j in Enumerable.Range(1, NameGeneratorLoopAmount))
                     {
                         var NameGeneratorRandom = new Random();
                         int NameGeneratorNameIndex = NameGeneratorRandom.Next(nameList.Count);
@@ -264,7 +263,7 @@ namespace FirstStepsCSharp
                 }
                 Console.WriteLine("How many random names do you want? ");
                 var NameGeneratorAmount = Console.ReadLine(); //The amount of times the names will be generated     
-                nameAndSurnameList(int.Parse(NameGeneratorAmount));         
+                nameAndSurnameList(int.Parse(NameGeneratorAmount));
             }// Gives you random names
         }
     }
