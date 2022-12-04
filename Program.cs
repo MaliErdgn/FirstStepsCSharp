@@ -1,4 +1,7 @@
 ﻿using HtmlAgilityPack;
+using System.Reflection.Metadata;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace FirstStepsCSharp
 {
@@ -6,13 +9,13 @@ namespace FirstStepsCSharp
     {
         static void Main(string[] args)
         {
-            ProgrammingChallenges.NameGenerator();
+            ProgrammingChallenges.ProjectEuler();
         }
 
 
         class ProgrammingChallenges
         {
-            public static void higherOrLower() //Done
+            public static void higherOrLower() //Done //play game where you try to guess the number (between 1-100)
             {
                 Random rand = new Random();
                 int higherOrLowerRandom = rand.Next(1, 101); // a random number between 1 and 100 
@@ -44,8 +47,8 @@ namespace FirstStepsCSharp
                     higherOrLowerGuessNo += 1;
                 }
                 Console.WriteLine("It took you " + higherOrLowerGuessNo + " amount of guesses");
-            }//play game where you try to guess the number (between 1-100)
-            public static void tempatureConverter() //Done
+            }
+            public static void tempatureConverter() //Done //do conversion between tempature types
             {
                 Console.WriteLine("Choose conversion type:\nCelcius to Kelvin (1)\nCelcius to Fahrenheit (2)\nFahrenheit to Kelvin (3)\nFahrenheit to Celcius (4)\nKelvin to Celcius (5)\nKelvin to Fahrenheit (6)");
                 string tempatureConverterInput = Console.ReadLine();
@@ -93,8 +96,8 @@ namespace FirstStepsCSharp
                         Console.WriteLine("Invalid input");
                         break;
                 }
-            }//do conversion between tempature types
-            public static void rockPaperScissors() //Done
+            }
+            public static void rockPaperScissors() //Done //play rock paper scissors with computer
             {
                 int rockPaperScissorsPlayerScore = 0;
                 int rockPaperScissorsCPUScore = 0;
@@ -133,8 +136,8 @@ namespace FirstStepsCSharp
                     }
                     Console.WriteLine("Player " + rockPaperScissorsPlayerScore + "-" + rockPaperScissorsCPUScore + " Computer");
                 }
-            }//play rock paper scissors with computer
-            public static void FourWayCalculator() //Done
+            }
+            public static void FourWayCalculator() //Done //a basic 4 operation calculator (+ - * /)
             {
                 static int Add(int firstAddition, int secondAddition) // adds the given numbers
                 {
@@ -212,8 +215,8 @@ namespace FirstStepsCSharp
                     }
                 }
                 Calculator();
-            }//a basic 4 operation calculator (+ - * /)
-            public static void CalculateAgeInSeconds() //Done
+            }
+            public static void CalculateAgeInSeconds() //Done //Calculates the total amount of times past your birthdate
             {
                 DateTime CalculateAgeInSecondsCurrentDate = DateTime.Now;
                 Console.WriteLine("Enter your birthdate in the format DD MM YYYY: ");
@@ -225,8 +228,8 @@ namespace FirstStepsCSharp
                 string[] CalculateAgeInSecondsOutput = CalculateAgeInSecondsDiffString.Split(",");
                 Console.WriteLine(CalculateAgeInSecondsOutput[0] + " seconds have passed since you were born!");
 
-            }//Calculates the total amount of times past your birthdate
-            public static void NameGenerator()//Done 
+            }
+            public static void NameGenerator()//Done // Gives you random names
             {
                 static void nameAndSurnameList(int NameGeneratorLoopAmount) //Creates lists of names and surnames
                 {
@@ -264,7 +267,136 @@ namespace FirstStepsCSharp
                 Console.WriteLine("How many random names do you want? ");
                 var NameGeneratorAmount = Console.ReadLine(); //The amount of times the names will be generated     
                 nameAndSurnameList(int.Parse(NameGeneratorAmount));
-            }// Gives you random names
+            }
+            public static void EncryptionDecryption()
+            { 
+                //byte[] KEY;
+                //byte[] IV;
+
+                //var encryptionTripleDes = new TripleDES.Create();
+
+                //KEY = encryptionTripleDes.Key;
+                //IV = encryptionTripleDes.IV;
+                //Console.WriteLine(string.Join(",", KEY));
+                //var encText = "Merhaba Mali";
+                //var encCipheredText = Encrypt(encText);
+                //Console.WriteLine(encCipheredText);
+                 
+                //static string Encrypt(string encrypts) 
+                //{
+                //    //Convert input into bytes
+                //    var encBuffer = Encoding.UTF8.GetBytes(encrypts);
+                //    //create instance of crypto provider
+                //    var encryptionTripleDes = new TripleDES.Create()
+                //    {
+                //        IV = IV,
+                //        Key = KEY
+                //    };
+                //    ICryptoTransform transform = encryptionTripleDes.CreateEncryptor();
+
+                //    var encCipherText = transform.TransformFinalBlock(encBuffer,0,encBuffer.Length);
+                    
+                //    return Convert.ToBase64String(encCipherText);
+
+                //}
+            } 
+            public static void FizzBuzz()//Done //The simple FizzBuzz game
+            {
+                string fizzRepeatNumber;
+                Console.WriteLine("Which number do you want to play FizzBuzz untill?");
+                fizzRepeatNumber = Console.ReadLine();
+                int fizzRepeatNumberInt = int.Parse(fizzRepeatNumber);
+                void FizzBuzzString (int fizzRepeatNumberInt)
+                {
+                    foreach (int i in Enumerable.Range(1, fizzRepeatNumberInt))
+                    {
+                        if ((i % 3 == 0) && (i % 5 == 0)) 
+                        {
+                            Console.WriteLine("FizzBuzz");
+                        }
+                        else if (i % 3 == 0) 
+                        {
+                            Console.WriteLine("Fizz");
+                        }
+                        else if (i % 5 == 0)
+                        {
+                            Console.WriteLine("Buzz");
+                        }
+                        else
+                        {
+                            Console.WriteLine(i);
+                        }
+                    }
+                }
+                FizzBuzzString(fizzRepeatNumberInt);
+            }
+            public static void ProjectEuler()//Done the first 4
+            {
+                #region Question 1 
+                // If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+                // Find the sum of all the multiples of 3 or 5 below 1000.
+                int eulerAnswer1 = 0;  
+                for (int i = 0; i < 1000; i++) 
+                {
+                    if ((i % 3 == 0) || (i % 5 == 0)) 
+                    {
+                        eulerAnswer1 += i;
+                    }
+                }
+                Console.WriteLine("Question 1 \r\n\r\nIf we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.\r\n\r\nFind the sum of all the multiples of 3 or 5 below 1000.\r\nAnswer: "+ eulerAnswer1 + "\r\nConfirmed\r\n\r\n\r\n");
+                #endregion
+                #region Question 2
+                int eulerAnswer2 =0;
+                int eulerFibonacci1 = 0;
+                int eulerFibonacci2 = 1;
+                int eulerFibonacciNextTerm = eulerFibonacci1 + eulerFibonacci2;
+                do
+                {
+                    if (eulerFibonacciNextTerm % 2 == 0)
+                    {
+                        eulerAnswer2 += eulerFibonacciNextTerm;
+                    }
+                    eulerFibonacci1 = eulerFibonacci2;
+                    eulerFibonacci2 = eulerFibonacciNextTerm;
+                    eulerFibonacciNextTerm = eulerFibonacci1 + eulerFibonacci2;
+                } while (eulerFibonacciNextTerm < 4000000);
+                Console.WriteLine("Question 2 \r\n\r\nBy considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.\r\nAnswer: " + eulerAnswer2 + "\r\nConfirmed\r\n\r\n\r\n");
+                #endregion
+                #region Question 3
+                long eulerNum = 600851475143;
+                long eulerTestFactor = 1;
+                string eulerPrimeString = "";
+                while (++eulerTestFactor <= eulerNum)
+                {
+                    eulerPrimeString += (eulerNum % eulerTestFactor == 0) ? " " + eulerTestFactor : "";
+
+                    while (eulerNum % eulerTestFactor == 0) eulerNum /= eulerTestFactor ;
+                }
+                Console.WriteLine("Question 3 \r\n\r\nThe prime factors of 13195 are 5, 7, 13 and 29.\r\n\r\nWhat is the largest prime factor of the number 600851475143 ?\r\nAnswer:" + eulerPrimeString + "\r\nConfirmed\r\n\r\n\r\n");
+                #endregion
+                #region Question 4
+                int eulerX;
+                int eulerY = 0;
+                string eulerProduct = "", eulerAnswer4 = "";
+                List<int> eulerAnswer4List = new List<int>();
+                for (eulerX = 100; eulerX < 999; eulerX++)
+                {
+                    for (eulerY = 100; eulerY < 999; eulerY++)
+                    {
+                        eulerProduct = Convert.ToString(eulerX * eulerY);
+                        
+                        
+                        if (eulerProduct == new String(eulerProduct.Reverse().ToArray()))
+                        {
+                            
+                            eulerAnswer4 = eulerProduct;
+                            eulerAnswer4List.Add(Convert.ToInt32(eulerAnswer4));
+                        } 
+                    }
+                }
+                Console.WriteLine("Question 4 \r\n\r\nA palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.\r\n\r\nFind the largest palindrome made from the product of two 3-digit numbers.\r\nAnswer:" +eulerAnswer4List.Max() + "\r\nConfirmed\r\n\r\n\r\n");
+                #endregion
+            }
         }
     }
 }
