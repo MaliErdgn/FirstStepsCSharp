@@ -10,7 +10,7 @@ namespace FirstSteps
     {
         public static void tempatureConverter() //Done //do conversion between tempature types
         {
-            Console.WriteLine("Choose conversion type:\nCelcius to Kelvin (1)\nCelcius to Fahrenheit (2)\nFahrenheit to Kelvin (3)\nFahrenheit to Celcius (4)\nKelvin to Celcius (5)\nKelvin to Fahrenheit (6)");
+            Console.WriteLine("Choose conversion type:\nCelcius to Kelvin (1)\nCelcius to Fahrenheit (2)\nFahrenheit to Kelvin (3)\nFahrenheit to Celcius (4)\nKelvin to Celcius (5)\nKelvin to Fahrenheit (6)\r\n");
             string tempatureConverterInput = Console.ReadLine();
             float tempatureConverterReturnedValue;
             float tempatureConverterInputValue;
