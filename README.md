@@ -10,11 +10,11 @@ Calculate Age in seconds (with leap year) ✔
 
 Encryption/Decryption algorithm 
 
-FizzBuzz 
+FizzBuzz ✔
 
 RockPaperScissors ✔
 
-Project Euler (in every language you know) 
+Project Euler (in every language you know) ✔
 
 Hangman 
 

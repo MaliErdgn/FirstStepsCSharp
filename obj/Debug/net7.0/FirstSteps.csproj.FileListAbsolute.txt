@@ -18,15 +18,15 @@ C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\bin\Debug\net7.0\FirstS
 C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\bin\Debug\net7.0\FirstSteps.runtimeconfig.json
 C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\bin\Debug\net7.0\FirstSteps.dll
 C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\bin\Debug\net7.0\FirstSteps.pdb
+C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\bin\Debug\net7.0\HtmlAgilityPack.dll
 C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\obj\Debug\net7.0\FirstSteps.csproj.AssemblyReference.cache
 C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\obj\Debug\net7.0\FirstSteps.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\obj\Debug\net7.0\FirstSteps.AssemblyInfoInputs.cache
 C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\obj\Debug\net7.0\FirstSteps.AssemblyInfo.cs
 C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\obj\Debug\net7.0\FirstSteps.csproj.CoreCompileInputs.cache
+C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\obj\Debug\net7.0\FirstSteps.csproj.CopyComplete
 C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\obj\Debug\net7.0\FirstSteps.dll
 C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\obj\Debug\net7.0\refint\FirstSteps.dll
 C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\obj\Debug\net7.0\FirstSteps.pdb
 C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\obj\Debug\net7.0\FirstSteps.genruntimeconfig.cache
 C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\obj\Debug\net7.0\ref\FirstSteps.dll
-C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\bin\Debug\net7.0\HtmlAgilityPack.dll
-C:\Users\Mali\Desktop\Codes\C#\Beginner\FirstStepsCSharp\obj\Debug\net7.0\FirstSteps.csproj.CopyComplete
